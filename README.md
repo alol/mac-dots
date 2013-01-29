@@ -32,9 +32,7 @@ You will be prompted before any existing files are overwritten. Symlinks are cre
 
 Updating
 --------
-    cd ~/.mac-dots
-    git pull
-    reload
+    upgrade_mac_dots
 
 Customization
 -------------
@@ -47,7 +45,7 @@ As their respective names indicate, these files are executed **before** and **af
 
 These two files are **not** under git control, so are truly personal.
 
-Tip: 
+Tip:
 
 To make updates easier, put the following environment variables into your
 .before-mac-dots file so that you don't have to type them out during an update:
