@@ -17,11 +17,8 @@ alias nginxconf="subl /usr/local/etc/nginx"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 
 # ls
-alias l="ls -lAh"
-alias la='ls -a'
 alias ll="ls -l"
 alias llt="ls -lrt"
-alias ls="ls -F"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
