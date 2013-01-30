@@ -8,7 +8,7 @@ set -e
 echo ''
 
 info () {
-  printf "  [ \033[00;34m..\033[0m ] $1"
+  printf "  [ \033[00;34m..\033[0m ] $1 "
 }
 
 user () {
@@ -24,6 +24,21 @@ fail () {
   echo ''
   exit
 }
+
+unlink_file () {
+  unlink $1
+  success "unlinked $1"
+}
+
+uninstall_previous_version () {
+	info 'cleaning up from previous mac-dots version'
+	user 'cleaning up from previous mac-dots version'
+	unlink_file "$HOME/.gitconfig"
+	unlink_file "$HOME/.gemrc"
+	unlink_file "$HOME/.irbrc"
+}
+
+uninstall_previous_version
 
 setup_gitconfig () {
 	info 'setup gitconfig'
@@ -121,7 +136,7 @@ install_dotfiles () {
   done
 }
 
-# install_dotfiles
+install_dotfiles
 
 echo ''
 echo '  All installed!'
