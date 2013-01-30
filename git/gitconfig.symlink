@@ -1,0 +1,44 @@
+[user]
+  name = Ed James
+  email = ed.james.email@gmail.com
+[color]
+  ui = auto
+[alias]
+  a = add .
+  amend = commit --amend
+  br = branch
+  ci = commit
+  co = checkout
+  df = diff
+  dft = difftool
+  proon = remote prune origin
+  proon-dry = remote prune origin --dry-run
+  sh = stash
+  st = status -sb
+
+  l =  "!source ~/.githelpers && pretty_git_log"
+  d =  "!source ~/.githelpers && deployment_git_log"
+  la = !git l --all
+  r = !git l -20
+  ra = !git r --all
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+  editor = subl -n -w
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[branch]
+  autosetupmerge = true
+[remote "origin"]
+  push = HEAD
+[push]
+  default = tracking
+[diff]
+  mnemonicprefix = true
+  tool = diffmerge
+[difftool]
+  prompt = false
+[difftool "diffmerge"]
+  cmd = diffmerge $LOCAL $REMOTE
+[mergetool]
+  keepBackup = false
