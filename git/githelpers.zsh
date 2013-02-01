@@ -27,7 +27,7 @@ SUBJECT="%s"
 
 FORMAT="$HASH}$RELATIVE_TIME}$AUTHOR}$REFS $SUBJECT"
 
-pretty_git_log() {
+_git_log_format_pretty() {
     git log --graph --pretty="tformat:${FORMAT}" $* |
         # Replace (2 years ago) with (2 years)
         sed -Ee 's/(^[^<]*) ago)/\1)/' |
@@ -41,7 +41,7 @@ pretty_git_log() {
 
 DEPLOYMENT_FORMAT="$DATE}$AUTHOR}$SUBJECT}$HASH}"
 
-deployment_git_log() {
+_git_log_format_deploy() {
     git log --graph --date=short --pretty="tformat:${DEPLOYMENT_FORMAT}" $* |
         # Replace (2 years ago) with (2 years)
         sed -Ee 's/(^[^<]*) ago)/\1)/' |
