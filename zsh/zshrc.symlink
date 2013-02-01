@@ -1,8 +1,7 @@
 # .zshrc
 # vim:syntax=sh
 
-export MACDOTS=$HOME/.mac-dots
-export ZSH=$HOME/.oh-my-zsh
+# MACDOTS and ZSH are set in zprofile.symlink
 
 # Temporary utility function
 function _source_if_exists {
@@ -47,7 +46,6 @@ source $ZSH/oh-my-zsh.sh
 # After everything else
 _source_if_exists "${HOME}/.after-mac-dots" ;
 
+# clean up
 unset config_files ;
-
-# Temporary utility function
 unset _source_if_exists ;

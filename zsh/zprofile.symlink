@@ -1,12 +1,13 @@
 # .zprofile
 # vim:syntax=sh
 
-MACDOTS_HOME=$HOME/.mac-dots
+export MACDOTS=$HOME/.mac-dots
+export ZSH=$HOME/.oh-my-zsh
 
 # Check for updates on initial load...
 if [ "$DISABLE_MACDOTS_AUTO_UPDATE" != "true" ]
 then
-  /usr/bin/env MACDOTS=$MACDOTS zsh $MACDOTS/script/check_for_upgrade
+  /usr/bin/env MACDOTS=$MACDOTS zsh $MACDOTS/bin/check_for_upgrade
 fi
 
 # Print a shell banner for login shells
