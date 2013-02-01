@@ -36,4 +36,4 @@ alias left="df -h"
 alias hgrep="history | grep \$1"
 alias psef="ps -ef | grep \$1"
 alias cls="clear"
-alias please="sudo" # haha!
+alias pls="sudo" # haha!
