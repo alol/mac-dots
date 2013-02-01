@@ -20,10 +20,10 @@ alias gx="gitx"
 alias gld="_git_log_format_deploy -20"
 alias glp="_git_log_format_pretty -20"
 
-alias gaa="git add ."
+alias ga="git add ."
 alias gam='git commit --amend'
 alias gl='git pull --prune'
-alias gp='git push origin HEAD'
+alias gp='git push'
 alias gd='git diff'
 alias gdt='git difftool'
 alias gc='git commit'
