@@ -4,7 +4,6 @@ cd $MACDOTS
 
 if git pull origin master ; then
   $MACDOTS/script/bootstrap
-  _print_macdots_banner
   printf '\033[0;32m%s\033[0m\n' 'Sweet! mac-dots has been updated and/or is at the current version.'
 else
   printf '\033[0;32m%s\033[0m\n' 'There was an error updating. Try again later?'
