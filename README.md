@@ -32,7 +32,7 @@ You will be prompted before any existing files are overwritten. Symlinks are cre
 
 Updating
 --------
-    upgrade_mac_dots
+    upgrade_macdots
 
 Customization
 -------------
