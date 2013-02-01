@@ -7,7 +7,7 @@
 
 # Upgrade mac-dots
 function upgrade_macdots {
-  /usr/bin/env MACDOTS_HOME=$MACDOTS_HOME zsh $MACDOTS_HOME/bin/upgrade
+  /usr/bin/env MACDOTSreload=$MACDOTS zsh $MACDOTS/bin/upgrade
 }
 
 # Log into a vzaar server

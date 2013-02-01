@@ -132,5 +132,4 @@ install_dotfiles () {
 install_dotfiles
 
 source $MACDOTS/zsh/banner.zsh && _print_macdots_banner ;
-echo '  All installed!'
 echo

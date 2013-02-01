@@ -11,6 +11,7 @@ then
 fi
 
 # Print a shell banner for login shells
+source $MACDOTS/zsh/banner.zsh && _print_macdots_banner ;
 echo ; echo "Kickin' ass with $(zsh --version)" ;
 
 # Print .mac-dots version
