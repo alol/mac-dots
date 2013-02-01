@@ -1,4 +1,6 @@
 #!/bin/sh
+# check_for_upgrade
+# vim:syntax=sh
 
 function _current_epoch() {
   echo $(($(date +%s) / 60 / 60 / 24))
@@ -22,6 +24,9 @@ if [ -f ~/.mac-dots-update ] ; then
   fi
 
   epoch_diff=$(($(_current_epoch) - $LAST_EPOCH))
+
+  echo $epoch_diff ;
+
   if [ $epoch_diff -gt 13 ] ; then
     if [ "$DISABLE_UPDATE_PROMPT" = "true" ] ; then
       _upgrade_macdots

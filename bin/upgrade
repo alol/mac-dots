@@ -1,5 +1,11 @@
+#!/bin/sh
+# upgrade
+# vim:syntax=sh
+
 current_path=`pwd`
+
 printf '\033[0;32m%s\033[0m\n' "Upgrading mac-dots..."
+
 cd $MACDOTS
 
 if git pull origin master ; then
@@ -8,5 +14,6 @@ if git pull origin master ; then
 else
   printf '\033[0;32m%s\033[0m\n' 'There was an error updating. Try again later?'
 fi
+
 echo
 cd "$current_path"
