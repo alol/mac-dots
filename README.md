@@ -70,6 +70,7 @@ Some of my stuff has been shamelessly lifted, some has been modified, some is my
 
 * [Peter Vandenberk (pvdb)](https://github.com/pvdb) and his (unfortunately private) sbrc project.
 * [Ryan Bates (ryanb)](https://github.com/ryanb) of RailsCasts fame, and his own [dotfiles](https://github.com/ryanb/dotfiles) project.
+* [Zach Holman (holman)](https://github.com/holman) and his own [dotfiles](https://github.com/holman/dotfiles) project.
 
 Copyright
 ---------
