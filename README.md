@@ -75,4 +75,4 @@ Some of my stuff has been shamelessly lifted, some has been modified, some is my
 Copyright
 ---------
 
-Copyright (c) 2012 Ed James. See LICENSE for details.
+Copyright (c) 2013 Ed James. See LICENSE for details.
