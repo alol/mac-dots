@@ -4,9 +4,9 @@
 alias g="git"
 
 # branches
-alias develop_branch="git co develop"
-alias master_branch="git co master"
-alias stable_branch="git co stable"
+alias develop_branch="git checkout develop"
+alias master_branch="git checkout master"
+alias stable_branch="git checkout stable"
 
 # rebase
 alias rebase_master="git pull --rebase origin master"
