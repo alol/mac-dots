@@ -26,7 +26,7 @@ Installation
     cd ~
     git clone git://github.com/edjames/mac-dots ~/.mac-dots
     cd ~/.mac-dots
-    rake install
+    ./script/bootstrap
 
 You will be prompted before any existing files are overwritten. Symlinks are created for each dotfile in this project.
 
