@@ -39,7 +39,7 @@ _git_log_format_pretty() {
         less -FXRS
 }
 
-DEPLOYMENT_FORMAT="$local date}$author}$subject}$hash}"
+DEPLOYMENT_FORMAT="$date}$author}$subject}$hash}"
 
 _git_log_format_deploy() {
     git log --graph --date=short --pretty="tformat:${DEPLOYMENT_FORMAT}" $* |
