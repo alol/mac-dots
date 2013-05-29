@@ -49,3 +49,5 @@ _source_if_exists "${HOME}/.after-mac-dots" ;
 # clean up
 unset config_files ;
 unset _source_if_exists ;
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
