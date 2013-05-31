@@ -16,3 +16,4 @@ alias rst='touch tmp/restart.txt'
 
 # RubyMine
 alias remote-debug="rdebug-ide --port 1234 -- \$1"
+alias rebuild_ctags="ctags -R -f .tags"
