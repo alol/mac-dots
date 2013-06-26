@@ -42,26 +42,36 @@ uninstall_previous_version () {
 uninstall_previous_version
 
 setup_gitconfig () {
-	info 'setup gitconfig'
+  info 'setup gitconfig'
 
-	git_name=$GIT_NAME
-	if [ "$git_name" == null ] ; then
-		user ' - What is your github author name?'
-		read -e git_name
-	fi
+  git_name=$GIT_NAME
+  if [ "$git_name" == null ] ; then
+    user ' - What is your github author name?'
+    read -e git_name
+  fi
 
-	git_email=$GIT_EMAIL
-	if [ "$git_email" == null ] ; then
-		user ' - What is your github author email?'
-		read -e git_email
-	fi
+  git_email=$GIT_EMAIL
+  if [ "$git_email" == null ] ; then
+    user ' - What is your github author email?'
+    read -e git_email
+  fi
 
-	sed -e "s/GIT_NAME/$git_name/g" -e "s/GIT_EMAIL/$git_email/g" git/gitconfig.symlink.template > git/gitconfig.symlink
+  sed -e "s/GIT_NAME/$git_name/g" -e "s/GIT_EMAIL/$git_email/g" git/gitconfig.symlink.template > git/gitconfig.symlink
 
-	success 'gitconfig'
+  success 'gitconfig'
 }
 
-setup_gitconfig
+setup_awscliconfig () {
+  info 'setup aws cli config'
+
+  aws_access_key_id=$AMAZON_ACCESS_KEY_ID
+  aws_secret_access_key=$AMAZON_SECRET_ACCESS_KEY
+  sed -e "s/AMAZON_ACCESS_KEY_ID/$aws_access_key_id/g" -e "s/AMAZON_SECRET_ACCESS_KEY/$aws_secret_access_key/g" zsh/awsrc.symlink.template > zsh/awsrc.symlink
+
+  success 'aws cli config'
+}
+
+setup_awscliconfig
 
 link_files () {
   ln -s $1 $2
