@@ -15,7 +15,6 @@ Bundle 'tpope/vim-rails'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jnurmine/Zenburn'
 Bundle 'mileszs/ack.vim'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mattn/zencoding-vim'
 Bundle 'rosenfeld/conque-term'
@@ -61,8 +60,6 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 
 set laststatus=2                  " Show the status line all the time
-
-let g:Powerline_symbols = 'fancy' " enable pretty symbols for powerline
 
 "set invisible characters (similar to textmate)
 set listchars=tab:▸\ ,eol:¬
@@ -113,3 +110,8 @@ nmap <leader>§ :sp $MYVIMRC<cr>
 nmap <leader>± :source $MYVIMRC<cr>:source $MYGVIMRC<cr>
 nmap <leader><leader> :noh<cr>
 nmap <D-R> :call RunRspecCurrentFileConque()<CR>
+
+set mouse=a
+map <D-r> "*y<cr>
+nmap <A-t> :tabnext<cr>
+nmap <A-T> :tabprev<cr>
