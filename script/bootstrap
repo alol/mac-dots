@@ -25,6 +25,16 @@ fail () {
   exit
 }
 
+source_before_macdots () {
+  if [ -f "$HOME/.before-mac-dots" ] ; then
+    info 'sourcing ~/.before-mac-dots'
+    source "$HOME/.before-mac-dots"
+    success 'sourcing ~/.before-mac-dots'
+  fi
+}
+
+source_before_macdots
+
 unlink_file () {
   unlink $1
   success "unlinked $1"
@@ -60,6 +70,8 @@ setup_gitconfig () {
 
   success 'gitconfig'
 }
+
+setup_gitconfig
 
 setup_awscliconfig () {
   info 'setup aws cli config'
