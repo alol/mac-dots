@@ -20,6 +20,10 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 alias ll="ls -l"
 alias llt="ls -lrt"
 
+# grep and less
+alias -g G='| grep'
+alias -g L='| less'
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
