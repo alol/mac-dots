@@ -1,9 +1,9 @@
 set nocompatible                  " Remove vi compaitibility
 
-set t_Co=256
-
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
+
+set t_Co=256
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -13,7 +13,6 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rails'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'jnurmine/Zenburn'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mattn/zencoding-vim'
@@ -68,7 +67,9 @@ set listchars=tab:▸\ ,eol:¬
 imap <c-l> <space>=><space>
 
 "colours
-colorscheme zenburn
+let g:solarized_termcolors=256
+colorscheme solarized
+set background=light
 
 " unbind arrows
 "map <up> <nop>
