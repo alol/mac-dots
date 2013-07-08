@@ -12,6 +12,7 @@ alias st2='cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User'
 
 # Quick config updates
 alias hosts="subl /etc/hosts"
+alias known_hosts="subl ~/.ssh/known_hosts"
 alias macdots="subl ~/.mac-dots"
 alias nginxconf="subl /usr/local/etc/nginx"
 alias ohmyzsh="subl ~/.oh-my-zsh"
