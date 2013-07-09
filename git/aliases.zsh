@@ -21,6 +21,7 @@ alias gld="_git_log_format_deploy -20"
 alias glp="_git_log_format_pretty -20"
 
 alias ga="git add ."
+alias gac="git commit -am"
 alias gad="git add ."
 alias gam='git commit --amend'
 alias gl='git pull --prune'
@@ -29,7 +30,6 @@ alias gpf='git push -f'
 alias gd='git diff'
 alias gdt='git difftool'
 alias gc='git commit'
-alias gca="git commit -am"
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
