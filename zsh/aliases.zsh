@@ -21,7 +21,8 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 alias ll="ls -l"
 alias llt="ls -lrt"
 
-# grep and less
+# grep, less, pbcopy
+alias -g C='| pbcopy'
 alias -g G='| grep'
 alias -g L='| less'
 
