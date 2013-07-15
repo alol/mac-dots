@@ -9,6 +9,7 @@ printf '\033[0;32m%s\033[0m\n' "Upgrading mac-dots..."
 cd $MACDOTS
 
 if git pull origin master ; then
+  export HIDE_MACDOTS_BANNER=true
   $MACDOTS/script/bootstrap
   printf '\033[0;32m%s\033[0m\n' 'Sweet! mac-dots has been updated and/or is at the current version.'
 else

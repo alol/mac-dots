@@ -18,14 +18,14 @@
 # used to split on them. A } in the commit subject or any other field will
 # break this.
 
-HASH="%C(yellow)%h%Creset"
-RELATIVE_TIME="%Cgreen%ar%Creset"
-DATE="%Cgreen%ad%Creset"
-AUTHOR="%C(bold blue)%an%Creset"
-REFS="%C(red)%d%Creset"
-SUBJECT="%s"
+local hash="%C(yellow)%h%Creset"
+local relative_time="%Cgreen%ar%Creset"
+local date="%Cgreen%ad%Creset"
+local author="%C(bold blue)%an%Creset"
+local refs="%C(red)%d%Creset"
+local subject="%s"
 
-FORMAT="$HASH}$RELATIVE_TIME}$AUTHOR}$REFS $SUBJECT"
+FORMAT="$hash}$relative_time}$author}$refs $subject"
 
 _git_log_format_pretty() {
     git log --graph --pretty="tformat:${FORMAT}" $* |
@@ -39,7 +39,7 @@ _git_log_format_pretty() {
         less -FXRS
 }
 
-DEPLOYMENT_FORMAT="$DATE}$AUTHOR}$SUBJECT}$HASH}"
+DEPLOYMENT_FORMAT="$date}$author}$subject}$hash}"
 
 _git_log_format_deploy() {
     git log --graph --date=short --pretty="tformat:${DEPLOYMENT_FORMAT}" $* |
@@ -52,3 +52,10 @@ _git_log_format_deploy() {
         # Page only if we need to
         less -FXRS
 }
+
+unset hash;
+unset relative_time;
+unset date;
+unset author;
+unset refs,
+unset subject;

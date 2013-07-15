@@ -12,6 +12,7 @@ alias st2='cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User'
 
 # Quick config updates
 alias hosts="subl /etc/hosts"
+alias known_hosts="subl ~/.ssh/known_hosts"
 alias macdots="subl ~/.mac-dots"
 alias nginxconf="subl /usr/local/etc/nginx"
 alias ohmyzsh="subl ~/.oh-my-zsh"
@@ -19,6 +20,11 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 # ls
 alias ll="ls -l"
 alias llt="ls -lrt"
+
+# grep, less, pbcopy
+alias -g C='| pbcopy'
+alias -g G='| grep'
+alias -g L='| less'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"

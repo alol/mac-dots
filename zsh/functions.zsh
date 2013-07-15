@@ -15,6 +15,12 @@ function vssh_login {
   ssh -i ~/.ssh/vzaar.pem vzaar@$1 ;
 }
 
+# Rebuild Finder "Open with..." menu
+# http://osxdaily.com/2013/01/22/fix-open-with-menu-mac-os-x/
+function rebuild_finder_menu {
+  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user; killall Finder; echo "Open With has been rebuilt, Finder will relaunch"
+}
+
 #################
 # Git functions #
 #################
