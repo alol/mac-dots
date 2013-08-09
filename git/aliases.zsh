@@ -17,7 +17,6 @@ alias gk="gitk"
 alias gx="gitx"
 
 # logs - using functions defined in githelpers.zsh
-alias gld="_git_log_format_deploy -20"
 alias glp="_git_log_format_pretty -20"
 
 alias ga="git add ."
@@ -37,4 +36,6 @@ alias grc='git rebase --continue'
 alias gri='git rebase -i'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
+alias gprune='git remote prune origin'
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gsh='git stash'

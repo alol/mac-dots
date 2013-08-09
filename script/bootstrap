@@ -73,6 +73,8 @@ setup_gitconfig () {
 
 setup_gitconfig
 
+# EJ Fix this: maybe check for a flag which will set this up?
+# Not everyone needs this.
 setup_awscliconfig () {
   info 'setup aws cli config'
 

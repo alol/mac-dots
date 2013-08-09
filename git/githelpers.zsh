@@ -39,7 +39,7 @@ _git_log_format_pretty() {
         less -FXRS
 }
 
-DEPLOYMENT_FORMAT="$date}$author}$subject}$hash}"
+DEPLOYMENT_FORMAT="%ad}%an}%s}%h"
 
 _git_log_format_deploy() {
     git log --graph --date=short --pretty="tformat:${DEPLOYMENT_FORMAT}" $* |
@@ -51,6 +51,10 @@ _git_log_format_deploy() {
         column -s '}' -t |
         # Page only if we need to
         less -FXRS
+}
+
+gld() {
+    _git_log_format_deploy $1 | vzaar-deployment-log-formatter | pbcopy
 }
 
 unset hash;

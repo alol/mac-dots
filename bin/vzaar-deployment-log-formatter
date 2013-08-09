@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+# Example: http://rubular.com/r/ttlBmVzd5a
+
+# This script formats a git-log line into a tabbed format
+# ready to paste into the vzaar deployment document.
+
+while line = STDIN.gets do
+	if line =~ /(\d{4}-\d{2}-\d{2})\s*(\S*\s\S*)(.*)(.{7})$/
+		date = $1
+		name = $2
+		message = $3
+		sha = $4
+
+		initials = name.split(/\s|-/).map {|n| n.chars.first}.join
+
+		puts "#{date}\t#{initials}\t#{message}\t#{sha}"
+	end
+end
