@@ -17,7 +17,6 @@ alias gk="gitk"
 alias gx="gitx"
 
 # logs - using functions defined in githelpers.zsh
-alias gld="_git_log_format_deploy -20"
 alias glp="_git_log_format_pretty -20"
 
 alias ga="git add ."
