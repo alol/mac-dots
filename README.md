@@ -1,5 +1,4 @@
 # MacDots: Dotfiles for your Mac
-===
 
 Dotfiles for Z-Shell on a Mac. Simples.
 
