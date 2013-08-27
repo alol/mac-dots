@@ -14,6 +14,6 @@ while line = STDIN.gets do
 
 		initials = name.split(/\s|-/).map {|n| n.chars.first}.join
 
-		puts "#{date}\t#{initials}\t#{message}\t#{sha}"
+		puts "#{date}\t#{initials}\t#{message}\t'#{sha}"
 	end
 end
