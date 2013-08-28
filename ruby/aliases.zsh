@@ -3,6 +3,7 @@
 
 # ruby
 alias rebuild_ctags="ctags -R -f .tags"
+alias v="vagrant"
 
 # rails
 alias b="bundle"
