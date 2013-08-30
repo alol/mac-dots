@@ -6,7 +6,7 @@
 #####################
 
 function rcallback() {
-  if [ -n $RCALLBACK_URL ]
+  if [ -n "$RCALLBACK_URL" ]
   then
     curl $RCALLBACK_URL -d "
       <?xml version='1.0' encoding='UTF-8'?>
@@ -26,7 +26,7 @@ function rcallback() {
 }
 
 function scallback() {
-  if [ -n $RCALLBACK_URL ]
+  if [ -n "$SCALLBACK_URL" ]
   then
     curl "$SCALLBACK_URL$1" -d '' &>/dev/null
   else
