@@ -80,7 +80,7 @@ setup_awscliconfig () {
 
   aws_access_key_id=$AMAZON_ACCESS_KEY_ID
   aws_secret_access_key=$AMAZON_SECRET_ACCESS_KEY
-  sed -e "s/AMAZON_ACCESS_KEY_ID/$aws_access_key_id/g" -e "s/AMAZON_SECRET_ACCESS_KEY/$aws_secret_access_key/g" zsh/awsrc.symlink.template > zsh/awsrc.symlink
+  sed -e "s#AMAZON_ACCESS_KEY_ID#${aws_access_key_id}#g" -e "s#AMAZON_SECRET_ACCESS_KEY#${aws_secret_access_key}#g" zsh/awsrc.symlink.template > zsh/awsrc.symlink
 
   success 'aws cli config'
 }
