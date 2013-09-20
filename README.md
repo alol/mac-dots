@@ -1,8 +1,8 @@
-# MacDots: Dotfiles for your Mac
+## MacDots: Dotfiles for your Mac
 
 Dotfiles for Z-Shell on a Mac. Simples.
 
-## Preparation
+### Preparation
 
 Although you will be prompted to overwrite any existing dotfiles during instalation, it's still a good idea to backup any of your existing dotfiles should you wish to undo anything.
 
@@ -18,7 +18,7 @@ Ensure you have **oh-my-zsh** installed. I use my own fork of the project, altho
 
 [https://github.com/edjames/oh-my-zsh](https://github.com/edjames/oh-my-zsh)
 
-## Installation
+### Installation
 
     cd ~
     git clone git://github.com/edjames/mac-dots ~/.mac-dots
@@ -27,17 +27,17 @@ Ensure you have **oh-my-zsh** installed. I use my own fork of the project, altho
 
 You will be prompted before any existing files are overwritten. Symlinks are created for each dotfile in this project.
 
-## Usage
+### Usage
 
 Coming soon...
 
-## Updating
+### Updating
 
 Run this command in a terminal. This is the same command that the automated updater uses, so you can run this any time you like.
 
     upgrade_macdots
 
-## Customization
+### Customization
 
 It is possible to customize your zsh environment even further by putting things in one of the following two files (typically you'd use these for custom environment settings and variables):
 
@@ -48,7 +48,15 @@ As their respective names indicate, these files are executed **before** and **af
 
 These two files are **not** created automatically. If you need them, create them.
 
-**Git Tip**
+##### Custom functions
+
+You can now create your own extensions by creating custom functions. In your `.after-mac-dots` file define a global variable called `MACDOTS_FUNCTIONS_PATH` which points to the directory containing your custom functions:
+
+    export MACDOTS_FUNCTIONS_PATH=~/path-to-your-custom-functions
+
+A custom function is a bash file that has a `.macdots_function` file extension. These will be loaded after everything else, so feel free to override any mac-dots functionality you like.
+
+##### Git Tip
 
 To make updates easier, put the following environment variables into your
 `.before-mac-dots` file so that you don't have to type them out during an update:
@@ -56,7 +64,7 @@ To make updates easier, put the following environment variables into your
     export GIT_NAME="<your name>"
     export GIT_EMAIL="<your email>"
 
-## Contributing to mac-dots
+### Contributing to mac-dots
 
 If you want to contribute:
 
@@ -67,7 +75,7 @@ If you want to contribute:
 * Commit and push until you are happy with your contribution
 * Do NOT change the VERSION file.
 
-## Credits
+### Credits
 
 Some of my stuff has been shamelessly lifted, some has been modified, some is my own, but credit where it's due...
 
@@ -75,6 +83,6 @@ Some of my stuff has been shamelessly lifted, some has been modified, some is my
 * [Ryan Bates (ryanb)](https://github.com/ryanb) of RailsCasts fame, and his own [dotfiles](https://github.com/ryanb/dotfiles) project.
 * [Zach Holman (holman)](https://github.com/holman) and his own [dotfiles](https://github.com/holman/dotfiles) project.
 
-## Copyright
+### Copyright
 
 Copyright (c) 2013 Ed James. See LICENSE for details.
