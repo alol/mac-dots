@@ -73,15 +73,23 @@ setup_gitconfig () {
 
 setup_gitconfig
 
+install_oh_my_zsh () {
+  info 'installing oh-my-zsh custom functions and theme'
+  ln -nfs $MACDOTS/oh-my-zsh/custom/plugins/folder-access $ZSH/custom/plugins/folder-access
+  ln -nfs $MACDOTS/oh-my-zsh/custom/plugins/rake $ZSH/custom/plugins/rake
+  ln -nfs $MACDOTS/oh-my-zsh/themes/edjames.zsh-theme $ZSH/themes/edjames.zsh-theme
+  success 'oh-my-zsh custom functions and theme'
+}
+
+install_oh_my_zsh
+
 # EJ Fix this: maybe check for a flag which will set this up?
 # Not everyone needs this.
 setup_awscliconfig () {
   info 'setup aws cli config'
-
   aws_access_key_id=$AMAZON_ACCESS_KEY_ID
   aws_secret_access_key=$AMAZON_SECRET_ACCESS_KEY
   sed -e "s#AMAZON_ACCESS_KEY_ID#${aws_access_key_id}#g" -e "s#AMAZON_SECRET_ACCESS_KEY#${aws_secret_access_key}#g" zsh/awsrc.symlink.template > zsh/awsrc.symlink
-
   success 'aws cli config'
 }
 

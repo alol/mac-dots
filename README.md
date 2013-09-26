@@ -12,11 +12,21 @@ Do the same for any other files you want to backup.
 
 To keep any custom or personal bash settings, see the `Customization` section below.
 
+#### zsh
+
+Install Z-Shell through homebrew. Then update your envorinment to use the new shell.
+
+    brew install zsh
+    sudo echo "/usr/local/bin/zsh" >> /etc/shells
+    chsh -s /usr/local/bin/zsh
+
+Then restart your shell.
+
 #### oh-my-zsh
 
-Ensure you have **oh-my-zsh** installed. I use my own fork of the project, although the original project will almost certainly work too.
+Ensure you have **oh-my-zsh** installed. Mac-dots now uses the original version of **oh-my-zsh** instead of the forked version.
 
-[https://github.com/edjames/oh-my-zsh](https://github.com/edjames/oh-my-zsh)
+[https://github.com/robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ### Installation
 
