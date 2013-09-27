@@ -17,7 +17,7 @@ To keep any custom or personal bash settings, see the `Customization` section be
 Install Z-Shell through homebrew. Then update your envorinment to use the new shell.
 
     brew install zsh
-    sudo echo "/usr/local/bin/zsh" >> /etc/shells
+    sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
     chsh -s /usr/local/bin/zsh
 
 Then restart your shell.
@@ -25,8 +25,11 @@ Then restart your shell.
 #### oh-my-zsh
 
 Ensure you have **oh-my-zsh** installed. Mac-dots now uses the original version of **oh-my-zsh** instead of the forked version.
+If you had the forked version of **oh-my-zsh** installed, you will need to disable it:
 
-[https://github.com/robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+    mv ~/.oh-my-zsh ~/.oh-my-zsh.old
+
+Then install the source version from here: [https://github.com/robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ### Installation
 
