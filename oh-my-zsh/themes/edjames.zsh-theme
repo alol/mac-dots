@@ -1,4 +1,4 @@
-PROMPT='%{$fg_bold[red]%}➜ %{$fg_bold[cyan]%}$(basename $PWD) %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}$(git_prompt_status) % %{$reset_color%}'
+PROMPT='%{$fg_bold[red]%}➜%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}$(git_prompt_status) % %{$reset_color%}'
 RPROMPT='%{$fg_bold[grey]%}$(~/.rvm/bin/rvm-prompt)%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
