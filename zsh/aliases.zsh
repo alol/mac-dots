@@ -9,6 +9,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias -- -="cd -"
 alias st2='cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User'
+alias st3='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User'
 
 # Quick config updates
 alias hosts="subl /etc/hosts"
@@ -27,8 +28,8 @@ alias -g G='| grep'
 alias -g L='| less'
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
+alias externalip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
 
 # ssh
 alias ssh_sam="ssh deployer@sam"
