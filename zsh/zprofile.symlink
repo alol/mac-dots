@@ -16,7 +16,3 @@ echo ; echo "Kickin' ass with Z-Shell version $ZSH_VERSION" ;
 
 # Print .mac-dots version
 [ -f "${HOME}/.mac-dots/VERSION" ] && echo "Z-Shell enhanced by mac-dots version $(cat $HOME/.mac-dots/VERSION)"
-
-# Print vzaar env check
-source $MACDOTS/vzaar/functions.zsh && vzcheck
-echo
