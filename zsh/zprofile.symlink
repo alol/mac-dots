@@ -12,7 +12,7 @@ fi
 
 # Print a shell banner for login shells
 source $MACDOTS/zsh/banner.zsh && _print_macdots_banner ;
-echo ; echo "Kickin' ass with $(zsh --version)" ;
+echo ; echo "Kickin' ass with Z-Shell version $ZSH_VERSION" ;
 
 # Print .mac-dots version
-[ -f "${HOME}/.mac-dots/VERSION" ] && echo "Z-Shell enhanced by mac-dots version $(cat $HOME/.mac-dots/VERSION)" && echo
+[ -f "${HOME}/.mac-dots/VERSION" ] && echo "Z-Shell enhanced by mac-dots version $(cat $HOME/.mac-dots/VERSION)"

@@ -7,7 +7,7 @@
 
 # Upgrade empty all log files
 function erl {
-  for i in `l log/*.log`; do cat /dev/null > $i; done
+  for i in `ls log/*.log`; do cat /dev/null > $i; done
 }
 
 # Change between 2 RVM gemsets

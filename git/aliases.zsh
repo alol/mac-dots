@@ -15,6 +15,7 @@ alias rebase_stable="git pull --rebase origin stable"
 # tools
 alias gk="gitk"
 alias gx="gitx"
+alias st="stree"
 
 # logs - using functions defined in githelpers.zsh
 alias glp="_git_log_format_pretty -20"
