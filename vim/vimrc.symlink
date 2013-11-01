@@ -114,3 +114,5 @@ set mouse=a
 map <D-r> "*y<cr>
 nmap <A-t> :tabnext<cr>
 nmap <A-T> :tabprev<cr>
+
+nmap <leader>cs :Rspec <C-R>=expand("%:s?app/??:r") . '!'<cr><cr>
